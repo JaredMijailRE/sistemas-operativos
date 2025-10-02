@@ -1,27 +1,20 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <fcntl.h>
-#include <sys/shm.h>
-#include <sys/stat.h>
-#include <sys/mman.h>
-int main()
+#include <linux/init.h>
+#include <linux/kernel.h>
+#include <linux/module.h>
+/* This function is called when the module is loaded. */
+int simple init(void)
 {
-/* the size (in bytes) of shared memory object */
-const int SIZE = 4096;
-/* name of the shared memory object */
-const char *name = "OS";
-/* shared memory file descriptor */
-int fd;
-/* pointer to shared memory obect */
-char *ptr;
-/* open the shared memory object */
-fd = shm open(name, O RDONLY, 0666);
-/* memory map the shared memory object */
-ptr = (char *)
-mmap(0, SIZE, PROT READ | PROT WRITE, MAP SHARED, fd, 0);
-/* read from the shared memory object */
-printf("%s",(char *)ptr);
-/* remove the shared memory object */
-shm unlink(name);
+printk(KERN INFO "Loading Kernel Module∖n");
 return 0;
 }
+/* This function is called when the module is removed. */
+void simple exit(void)
+{
+printk(KERN INFO "Removing Kernel Module∖n");
+}
+/* Macros for registering module entry and exit points. */
+module init(simple init);
+module exit(simple exit);
+MODULE LICENSE("GPL");
+MODULE DESCRIPTION("Simple Module");
+MODULE AUTHOR("SGG");
