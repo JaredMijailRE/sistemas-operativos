@@ -1,0 +1,7 @@
+- **"lsmod"**: Comando, lista los modulos actuales del sistema
+- **"simple_init()"**: Punto de entrada del modulo en C
+- **"simple_exit()"**: Punto de salida del modulo en C
+- **"make"**: Herramienta de automatizacion en linux, usualmente utilizada para compilar codigo de C o C++, las instrucciones se describen en un makefile
+- **"insmod"**: Comando, carga un modulo al kernel
+- **"dmesg"**: Comando, lee el buffer del Kernel
+- **"rmmod"**: Comando, remueve en modulo del kernel
