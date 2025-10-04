@@ -15,7 +15,7 @@ static int __init simple_init(void)
     printk(KERN_INFO "Loading Kernel Module\n");
 
     // GOLDEN_RATIO_PRIME
-    printk(KERN_INFO "GOLDEN_RATIO_PRIME = %lu\n", GOLDEN_RATIO_PRIME);
+    printk(KERN_INFO "GOLDEN_RATIO_PRIME = %llu\n", GOLDEN_RATIO_PRIME);
 
     // jiffies y HZ
     printk(KERN_INFO "jiffies at load: %lu\n", jiffies);
@@ -48,4 +48,4 @@ module_exit(simple_exit);
 
 MODULE_LICENSE("GPL");
 MODULE_DESCRIPTION("Extended Simple Module with GOLDEN_RATIO_PRIME, jiffies, gcd and HZ");
-MODULE_AUTHOR("TuNombre");
+MODULE_AUTHOR("SisOperativos");
