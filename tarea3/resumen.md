@@ -1,3 +1,5 @@
+Codiog Original: https://github.com/TheRealYoussef/Linux-Kernel-Module-for-Listing-Tasks/blob/master/ListTasksLinear.c 
+
 - **"task_struct"**: Estructura de datos del kernel que representa un proceso
     ref: https://elixir.bootlin.com/linux/v6.17.6/source/include/linux/sched.h#L816
 
