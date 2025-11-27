@@ -1,0 +1,2 @@
+g++ -pthread validaSudoku.cpp -o validaSudoku
+./validaSudoku
